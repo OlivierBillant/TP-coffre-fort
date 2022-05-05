@@ -19,9 +19,8 @@ public class CoffreFortTestAjout extends CoffreFortTest {
 	
 	@Test (expected = BLLException.class)
 	public void ajouterCoffreFerme() throws BLLException {
-		int excpected = 1;
-		this.vault.lock("motdepasse");
-		Assert.assertEquals(excpected, this.vault.addObject(gold));
+		this.vault.lock(goodPassword);
+		this.vault.addObject(gold);
 	}
 
 }

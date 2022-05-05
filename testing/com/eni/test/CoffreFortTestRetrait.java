@@ -20,11 +20,10 @@ public class CoffreFortTestRetrait extends CoffreFortTest {
 	
 	@Test (expected = BLLException.class)
 	public void enleverCoffreFerme() throws BLLException {
-		int excpected = 0;
 		
 		this.vault.addObject(gold);
-		this.vault.lock("motdepasse");
-		Assert.assertEquals(excpected, this.vault.removeObject(gold));
+		this.vault.lock(goodPassword);
+		this.vault.removeObject(gold);
 	}
 
 }

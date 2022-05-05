@@ -11,28 +11,27 @@ public class CoffreFortTestOuverture extends CoffreFortTest{
 	@Test
 	public void ouverture() throws BLLException {
 		boolean excpected = false;
-		String password = "motdepasse";
-		this.vault.lock("motdepasse");
-		this.vault.unlock(password);
+		this.vault.lock(goodPassword);
+		this.vault.unlock(goodPassword);
 		
 		Assert.assertEquals(excpected, this.vault.isLocked());
+		/*
+		 * Alternative
+		 * Assert.assertFalse(this.vault.isLocked());
+		 */
 	}
 	
 	@Test
 	public void ouvertureWPW() throws BLLException {
 		boolean excpected = false;
-		String password = "mauvaisMdp";
-		this.vault.lock("motdepasse");
-		this.vault.unlock(password);
+		this.vault.lock(goodPassword);
+		this.vault.unlock(wrongPassword);
 		Assert.assertNotEquals(excpected, this.vault.isLocked());
 	}	
 		
 	@Test (expected = BLLException.class)
 	public void ouvertureDejaOuvert() throws BLLException {
-		boolean excpected = false;
-		String password = "password";
-		this.vault.unlock(password);
-		Assert.assertNotEquals(excpected, this.vault.isLocked());
+		this.vault.unlock(goodPassword);
 	}	
 
 }
