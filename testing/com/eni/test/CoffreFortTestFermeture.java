@@ -4,12 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.eni.vault.bll.BLLException;
-import com.eni.vault.bll.Vault;
-import com.eni.vault.bo.Gold;
 
-public class CoffreFortTestFermeture {
-	Vault vault = new Vault();
-	Gold gold;
+
+public class CoffreFortTestFermeture extends CoffreFortTest{
+//	Vault vault = new Vault();
+//	Gold gold;
 	
 	@Test
 	public void fermeture() throws BLLException {

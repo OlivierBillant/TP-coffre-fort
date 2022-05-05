@@ -1,17 +1,14 @@
 package com.eni.test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.eni.vault.bll.BLLException;
-import com.eni.vault.bll.Vault;
-import com.eni.vault.bo.Gold;
 
-public class CoffreFortTestAjout {
-	Vault vault = new Vault();
-	Gold gold;
+
+public class CoffreFortTestAjout extends CoffreFortTest {
+//	Vault vault = new Vault();
+//	Gold gold;
 	
 	@Test
 	public void ajouter() throws BLLException {

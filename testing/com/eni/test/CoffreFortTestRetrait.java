@@ -1,17 +1,14 @@
 package com.eni.test;
 
-import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.eni.vault.bll.BLLException;
-import com.eni.vault.bll.Vault;
-import com.eni.vault.bo.Gold;
 
-public class CoffreFortTestRetrait {
-	Vault vault = new Vault();
-	Gold gold;
+public class CoffreFortTestRetrait extends CoffreFortTest {
+//	Vault vault = new Vault();
+//	Gold gold;
 	
 	@Test
 	public void enlever() throws BLLException {
